@@ -1,0 +1,64 @@
+:root {
+  --paper: #f7f8fc;
+  --ink: #1d2540;
+  --line: #d5daea;
+  --present: #1f8a5b;
+  --absent: #c93c3c;
+  --accent: #2d4fd6;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.5;
+}
+header { text-align: center; padding: 28px 16px 8px; }
+h1 { margin: 0 0 4px; font-size: 1.9rem; }
+header p { margin: 0; color: #55608a; }
+main { max-width: 760px; margin: 0 auto; padding: 16px; }
+.box {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+h2 { margin: 0 0 12px; font-size: 1.15rem; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+.between { justify-content: space-between; align-items: center; }
+.between h2 { margin: 0; }
+input {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+#studentName { flex: 1; min-width: 180px; }
+button {
+  font: inherit;
+  cursor: pointer;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+}
+button:focus-visible, input:focus-visible { outline: 3px solid #9fb2ff; }
+.summary { margin: 12px 0; color: #55608a; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 10px 6px; border-bottom: 1px solid var(--line); }
+th { font-size: .9rem; color: #55608a; font-weight: normal; }
+.mark { display: flex; gap: 6px; }
+.mark button { background: #fff; color: var(--ink); border: 1px solid var(--line); padding: 5px 10px; }
+.mark button.on-present { background: var(--present); color: #fff; border-color: var(--present); }
+.mark button.on-absent { background: var(--absent); color: #fff; border-color: var(--absent); }
+.low { color: var(--absent); font-weight: bold; }
+.good { color: var(--present); font-weight: bold; }
+.remove { background: none; color: var(--absent); padding: 4px 8px; }
+.empty { color: #55608a; text-align: center; margin: 16px 0 0; }
+@media (max-width: 520px) {
+  th:nth-child(3), td:nth-child(3) { font-size: .9rem; }
+  .mark button { padding: 5px 8px; }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Attendance Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Student Attendance Tracker</h1>
+    <p>Add students, mark attendance for any date and see each student's percentage.</p>
+  </header>
+
+  <main>
+    <!-- Step 1: add students -->
+    <section class="box">
+      <h2>Add student</h2>
+      <div class="row">
+        <input type="text" id="studentName" placeholder="Student name">
+        <button id="addBtn">Add student</button>
+      </div>
+    </section>
+
+    <!-- Step 2: pick date and mark attendance -->
+    <section class="box">
+      <div class="row between">
+        <h2>Mark attendance</h2>
+        <input type="date" id="dateInput">
+      </div>
+      <p id="summary" class="summary"></p>
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Today</th><th>Overall %</th><th></th></tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+      <p id="emptyMsg" class="empty">No students yet. Add your first student above.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
